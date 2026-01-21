@@ -7,9 +7,7 @@ const Header = () => {
     const location = useLocation();
 
     useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-        };
+        const handleScroll = () => setIsScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -19,25 +17,35 @@ const Header = () => {
     return (
         <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
             <div className="container header-container">
+                {/* 1. Logo */}
                 <Link to="/" className="logo">
-                    <span className="logo-icon"><i className="fa-solid fa-shield-halved"></i></span>
-                    KOM<span className="highlight">CAD</span>
+                    <i className="fa-solid fa-shield-halved" style={{ color: 'white' }}></i>
+                    <span>KOMCAD</span>
                 </Link>
 
+                {/* 2. Nav Links (Pushed Left) */}
                 <nav className={`nav ${mobileMenuOpen ? 'open' : ''}`}>
                     <ul className="nav-list">
-                        <li><Link to="/" className={`nav-link ${isActive('/')}`}>Home</Link></li>
-                        <li><Link to="/news" className={`nav-link ${isActive('/news')}`}>News</Link></li>
-                        <li><Link to="/about" className={`nav-link ${isActive('/about')}`}>About</Link></li>
-                        <li><Link to="/contact" className={`nav-link ${isActive('/contact')}`}>Contact</Link></li>
+                        <li><Link to="/" className={`nav-link ${isActive('/')}`}>Beranda</Link></li>
+                        <li><Link to="/about" className={`nav-link ${isActive('/about')}`}>Tentang</Link></li>
+                        <li><Link to="/news" className={`nav-link ${isActive('/news')}`}>Berita</Link></li>
+                        <li><Link to="/contact" className={`nav-link ${isActive('/contact')}`}>Kontak</Link></li>
                     </ul>
                 </nav>
 
-                <div className="auth-buttons">
-                    <a href="https://komcad.bacadnas.com/login" className="btn btn-outline small" target="_blank" rel="noopener noreferrer">Login</a>
-                    <a href="https://komcad.bacadnas.com/lregis" className="btn btn-primary small" target="_blank" rel="noopener noreferrer">Register</a>
+                <div className="header-actions">
+                    {/* Phone number removed as requested */}
+                    <a 
+                        href="https://komcad.bacadnas.com/" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="btn-cta"
+                    >
+                        Daftar / Login <i className="fa-regular fa-id-card"></i>
+                    </a>
                 </div>
 
+                {/* Mobile Toggle */}
                 <div className="mobile-toggle" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                     <i className={`fa-solid ${mobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
                 </div>
