@@ -19,7 +19,7 @@ const Header = () => {
             <div className="container header-container">
                 {/* 1. Logo */}
                 <Link to="/" className="logo">
-                    <i className="fa-solid fa-shield-halved" style={{ color: 'white' }}></i>
+                    <img src="/KEMENTERIAN-PERTAHANAN.png" alt="Kementerian Pertahanan" style={{ height: '60px', width: 'auto' }} />
                     <span>KOMCAD</span>
                 </Link>
 
@@ -35,13 +35,13 @@ const Header = () => {
 
                 <div className="header-actions">
                     {/* Phone number removed as requested */}
-                    <a 
-                        href="https://komcad.bacadnas.com/" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                    <a
+                        href="https://komcad.bacadnas.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="btn-cta"
                     >
-                        Daftar / Login <i className="fa-regular fa-id-card"></i>
+                        Daftar / Login
                     </a>
                 </div>
 

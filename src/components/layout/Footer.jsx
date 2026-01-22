@@ -5,39 +5,59 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="container">
-                <div className="footer-top">
+                <div className="footer-content">
+                    {/* Brand Section */}
                     <div className="footer-brand">
-                        <Link to="/" className="logo">
-                            <span className="logo-icon"><i className="fa-solid fa-shield-halved"></i></span>
-                            KOM<span className="highlight">CAD</span>
+                        <Link to="/" className="footer-logo">
+                            <img src="/KEMENTERIAN-PERTAHANAN.png" alt="Kementerian Pertahanan" style={{ height: '50px', width: 'auto' }} />
+                            <span>KOM<span className="highlight">CAD</span></span>
                         </Link>
-                        <p>Pertahanan Negara, Tanggung Jawab Bersama.</p>
+                        <p className="footer-tagline">Pertahanan Negara, Tanggung Jawab Bersama.</p>
+                        <p className="footer-description">
+                            Bergabunglah dengan Komponen Cadangan untuk memperkuat pertahanan nasional Indonesia.
+                        </p>
                     </div>
-                    <div className="footer-links">
+
+                    {/* Navigation Links */}
+                    <div className="footer-links-group">
                         <div className="link-column">
-                            <h4>Company</h4>
-                            <Link to="/about">About</Link>unut
-                            <Link to="/news">News</Link>
-                            <Link to="/contact">Contact</Link>
+                            <h4>Menu</h4>
+                            <Link to="/about" className="footer-link">Tentang Kami</Link>
+                            <Link to="/news" className="footer-link">Berita & Informasi</Link>
+                            <Link to="/contact" className="footer-link">Hubungi Kami</Link>
                         </div>
-                        <div className="footer-auth">
-                            <h4>Account</h4>
-                            <a href="https://komcad.bacadnas.com/login" target="_blank" rel="noopener noreferrer">Login</a>
-                            <a href="https://komcad.bacadnas.com/lregis" target="_blank" rel="noopener noreferrer">Register</a>
-                        </div>
+
                         <div className="link-column">
-                            <h4>Contact</h4>
-                            <a href="mailto:info@komcad.bacadnas.com">info@komcad.bacadnas.com</a>
-                            <a href="tel:+62210000000">+62 21 0000 0000</a>
+                            <h4>Akun</h4>
+                            <a href="https://komcad.bacadnas.com/login" target="_blank" rel="noopener noreferrer" className="footer-link">Masuk</a>
+                            <a href="https://komcad.bacadnas.com/login" target="_blank" rel="noopener noreferrer" className="footer-link">Daftar</a>
+                            <a href="#" className="footer-link">Pusat Bantuan</a>
+                        </div>
+
+                        <div className="link-column">
+                            <h4>Hubungi Kami</h4>
+                            <a href="mailto:info@komcad.bacadnas.com" className="footer-link icon-link">
+                                <i className="fa-regular fa-envelope"></i> info@komcad.bacadnas.com
+                            </a>
+                            <a href="tel:+62210000000" className="footer-link icon-link">
+                                <i className="fa-solid fa-phone"></i> +62 21 0000 0000
+                            </a>
+                            <div className="footer-socials">
+                                <a href="#" className="social-icon"><i className="fa-brands fa-instagram"></i></a>
+                                <a href="#" className="social-icon"><i className="fa-brands fa-twitter"></i></a>
+                                <a href="#" className="social-icon"><i className="fa-brands fa-youtube"></i></a>
+                                <a href="#" className="social-icon"><i className="fa-brands fa-linkedin-in"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div className="footer-bottom">
-                    <p>&copy; 2026 KOMCAD. All rights reserved.</p>
-                    <div className="socials">
-                        <a href="#"><i className="fa-brands fa-behance"></i></a>
-                        <a href="#"><i className="fa-brands fa-dribbble"></i></a>
-                        <a href="#"><i className="fa-brands fa-linkedin"></i></a>
+                    <p>&copy; 2026 KOMCAD. Hak Cipta Dilindungi.</p>
+                    <div className="footer-legal">
+                        <a href="#">Kebijakan Privasi</a>
+                        <span className="separator">•</span>
+                        <a href="#">Syarat & Ketentuan</a>
                     </div>
                 </div>
             </div>
